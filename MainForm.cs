@@ -35,18 +35,18 @@ namespace propclip_grinding_tracker
                 _settings = new SettingsHandler();
                 _settings.SubscribedSettings.Add(new SettingEntry(
                     "gamedir",
-                    (s) => { boxGameDir.Text = s; },
-                    () => { return boxGameDir.Text; }
+                    s => boxGameDir.Text = s,
+                    () => boxGameDir.Text
                 ));
                 _settings.SubscribedSettings.Add(new SettingEntry(
                     "workdir",
-                    (s) => { boxWorkDir.Text = s; },
-                    () => { return boxWorkDir.Text; }
+                    s => boxWorkDir.Text = s,
+                    () => boxWorkDir.Text
                 ));
                 _settings.SubscribedSettings.Add(new SettingEntry(
                     "demoname",
-                    (s) => { boxSaveDemoName.Text = s; },
-                    () => { return boxSaveDemoName.Text; }
+                    s => boxSaveDemoName.Text = s,
+                    () => boxSaveDemoName.Text
                 ));
 
                 _settings.LoadSettings();
